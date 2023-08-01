@@ -443,9 +443,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Assessment\\Big Bang Assessment 3\\Backend\\MakeYourTrip\\MakeYourTrip\\MakeYourTrip.csproj",
-      "projectName": "MakeYourTrip",
-      "projectPath": "F:\\Assessment\\Big Bang Assessment 3\\Backend\\MakeYourTrip\\MakeYourTrip\\MakeYourTrip.csproj",
+      "projectUniqueName": "F:\\Assessment\\Big Bang Assessment 3\\Backend\\MakeYourTrip\\MakeYourTrip\\LoginAndRegister.csproj",
+      "projectName": "LoginAndRegister",
+      "projectPath": "F:\\Assessment\\Big Bang Assessment 3\\Backend\\MakeYourTrip\\MakeYourTrip\\LoginAndRegister.csproj",
       "packagesPath": "C:\\Users\\Abinandhan\\.nuget\\packages\\",
       "outputPath": "F:\\Assessment\\Big Bang Assessment 3\\Backend\\MakeYourTrip\\MakeYourTrip\\obj\\",
       "projectStyle": "PackageReference",
