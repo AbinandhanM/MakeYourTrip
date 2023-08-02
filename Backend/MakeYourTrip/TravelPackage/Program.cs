@@ -1,23 +1,55 @@
-var builder = WebApplication.CreateBuilder(args);
+using Microsoft.EntityFrameworkCore;
+using TourPackage.Models;
+using TourPackage.Models.Context;
+using TourPackage.Interfaces;
+using TourPackage.Models;
 
-// Add services to the container.
 
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+namespace TourPackage
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var builder = WebApplication.CreateBuilder(args);
+
+
+            builder.Services.AddControllers();
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddSwaggerGen();
+            builder.Services.AddDbContext<TourContext>(opts =>
+            {
+                opts.UseSqlServer(builder.Configuration.GetConnectionString("myConn"));
+            });
+
+
+
+
+            builder.Services.AddScoped<IRepo<Destination, int>, DestinationRepo>();
+            builder.Services.AddScoped<IRepo<Exclusions, int>, ExclusionsRepo>();
+            builder.Services.AddScoped<IRepo<Inclusions,int>,InclusionsRepo>(); 
+            builder.Services.AddScoped<IRepo<TourDetails, int>, TourDetailsRepo>();
+            builder.Services.AddScoped<IRepo<TourDestination, int>, TourDestinationRepo>();
+            builder.Services.AddScoped<IRepo<TourExclusion, int>, TourExclusionRepo>();
+            builder.Services.AddScoped<IRepo<TourInclusion, int>, TourInclusionRepo>();
+            builder.Services.AddScoped<IRepo<TourDate, int>,TourDatesRepo>();
+
+
+            var app = builder.Build();
+
+            if (app.Environment.IsDevelopment())
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI();
+            }
+
+            app.UseAuthorization();
+
+
+            app.MapControllers();
+
+            app.Run();
+        }
+    }
 }
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-app.Run();
