@@ -1,7 +1,7 @@
-﻿using BookingAPI.Models;
-using BookingAPI.Models.DTOs;
+﻿using TourBooking.Models;
+using TourBooking.Models.DTOs;
 
-namespace BookingAPI.Interfaces
+namespace TourBooking.Interfaces
 {
     public interface IBookingRepo
     {

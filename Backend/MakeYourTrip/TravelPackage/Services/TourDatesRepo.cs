@@ -2,12 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using TourPackage.Interfaces;
-using TourPackage.Models;
-using TourPackage.Models.Context;
-using TourPackage.Models;
+using TravelPackage.Interfaces;
+using TravelPackage.Models;
+using TravelPackage.Models.Context;
 
-namespace TourPackage.Models
+namespace TravelPackage.Models
 {
     public class TourDatesRepo : IRepo<TourDate,int>
     {

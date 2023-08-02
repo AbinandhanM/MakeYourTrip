@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
-using TourPackage.Models;
-using TourPackage.Models.Context;
-using TourPackage.Interfaces;
-using TourPackage.Exceptions;
+using TravelPackage.Models;
+using TravelPackage.Models.Context;
+using TravelPackage.Interfaces;
+using TravelPackage.Exceptions;
 
 public class TourDestinationRepo :IRepo<TourDestination,int>
 {

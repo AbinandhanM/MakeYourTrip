@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace TourPackage.Models.Context
+namespace TravelPackage.Models.Context
 {
     public class TourContext : DbContext
     {

@@ -1,10 +1,13 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
+using TravelPackage.Models;
+using TravelPackage.Interfaces;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using TravelPackage.Exceptions;
+using System;
+using TravelPackage.Models.Context;
 using TourPackage.Models;
-using TourPackage.Models.Context;
-using TourPackage.Interfaces;
-using TourPackage.Models;
-
-
 
 namespace TourPackage
 {

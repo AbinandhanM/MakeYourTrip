@@ -1,5 +1,5 @@
-﻿using BookingAPI.Interfaces;
-using BookingAPI.Models;
+﻿using TourBooking.Interfaces;
+using TourBooking.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.EntityFrameworkCore.Migrations;

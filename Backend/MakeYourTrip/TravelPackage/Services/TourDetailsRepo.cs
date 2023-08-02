@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TourPackage.Models.Context;
-using TourPackage.Interfaces;
+using TravelPackage.Models.Context;
+using TravelPackage.Interfaces;
+using TravelPackage.Models;
 
 namespace TourPackage.Models
 {

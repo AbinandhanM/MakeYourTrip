@@ -1,5 +1,5 @@
-﻿using BookingAPI.Interfaces;
-using BookingAPI.Models;
+﻿using TourBooking.Interfaces;
+using TourBooking.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

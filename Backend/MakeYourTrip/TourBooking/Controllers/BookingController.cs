@@ -1,6 +1,6 @@
-﻿using BookingAPI.Interfaces;
-using BookingAPI.Models;
-using BookingAPI.Models.DTOs;
+﻿using TourBooking.Interfaces;
+using TourBooking.Models;
+using TourBooking.Models.DTOs;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

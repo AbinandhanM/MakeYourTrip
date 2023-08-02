@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
-namespace BookingAPI.Models
+namespace TourBooking.Models
 {
     public class Passenger
     {

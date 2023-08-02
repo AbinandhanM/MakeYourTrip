@@ -1,10 +1,12 @@
-using BookingAPI.Models;
+using TourBooking.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
 using TourBooking.Context;
+using TourBooking.Interfaces;
+using BookingAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -61,10 +63,10 @@ builder.Services.AddCors(options =>
         });
 });
 builder.Services.AddDbContext<BookingContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("myConn")));
-//builder.Services.AddScoped<IBookingRepo, ManageBookingService>();
-//builder.Services.AddScoped<IPassengerRepo, ManagePassengerService>();
-//builder.Services.AddScoped<IRepo<int,Booking>, BookingRepo>();
-//builder.Services.AddScoped<IRepo<int,Passenger>, PassengerRepo>();
+builder.Services.AddScoped<IBookingRepo, ManageBookingService>();
+builder.Services.AddScoped<IPassengerRepo, ManagePassengerService>();
+builder.Services.AddScoped<IRepo<int, Booking>, BookingRepo>();
+builder.Services.AddScoped<IRepo<int, Passenger>, PassengerRepo>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using TourPackage.Models.Context;
-using TourPackage.Interfaces;
-using TourPackage.Exceptions;
+using TravelPackage.Models.Context;
+using TravelPackage.Interfaces;
+using TravelPackage.Exceptions;
 
-namespace TourPackage.Models
+namespace TravelPackage.Models
 {
     public class DestinationRepo : IRepo<Destination,int>
     {

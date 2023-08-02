@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace TourPackage.Models
+namespace TravelPackage.Models
 {
     public class Inclusions
     {

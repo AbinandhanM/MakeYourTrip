@@ -1,4 +1,4 @@
-﻿namespace TourPackage.Interfaces
+﻿namespace TravelPackage.Interfaces
 {
     public interface IRepo<T, K>
     {

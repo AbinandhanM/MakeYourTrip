@@ -1,6 +1,6 @@
-﻿using BookingAPI.Models;
+﻿using TourBooking.Models;
 
-namespace BookingAPI.Interfaces
+namespace TourBooking.Interfaces
 {
     public interface IPassengerRepo
     {

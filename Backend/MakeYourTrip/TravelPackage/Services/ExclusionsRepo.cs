@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TourPackage.Models.Context;
-using TourPackage.Interfaces;
-using TourPackage.Exceptions;
+using TravelPackage.Models.Context;
+using TravelPackage.Interfaces;
+using TravelPackage.Exceptions;
 using Microsoft.VisualBasic;
+using TravelPackage.Models;
 
-namespace TourPackage.Models
+namespace TravelPackage.Models
 {
     public class ExclusionsRepo : IRepo<Exclusions,int>
     {

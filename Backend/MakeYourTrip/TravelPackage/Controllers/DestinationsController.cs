@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using TourPackage.Models;
-using TourPackage.Interfaces;
+using TravelPackage.Models;
+using TravelPackage.Interfaces;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
-using TourPackage.Exceptions;
+using TravelPackage.Exceptions;
 using System;
 
 namespace TourPackage.Controllers

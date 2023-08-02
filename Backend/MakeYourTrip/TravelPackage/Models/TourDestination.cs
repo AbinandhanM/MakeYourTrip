@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
-using TourPackage.Models;
+using TravelPackage.Models;
 
 public class TourDestination
 {

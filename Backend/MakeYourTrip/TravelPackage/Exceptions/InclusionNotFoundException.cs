@@ -1,4 +1,4 @@
-﻿namespace TourPackage.Exceptions
+﻿namespace TravelPackage.Exceptions
 {
     public class InclusionNotFoundException : Exception
     {

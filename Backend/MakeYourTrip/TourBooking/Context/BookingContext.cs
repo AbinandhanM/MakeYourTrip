@@ -1,4 +1,4 @@
-﻿using BookingAPI.Models;
+﻿using TourBooking.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace TourBooking.Context

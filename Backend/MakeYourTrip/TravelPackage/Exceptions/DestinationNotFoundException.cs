@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace TourPackage.Exceptions
+namespace TravelPackage.Exceptions
 {
     [Serializable]
     internal class DestinationNotFoundException : Exception

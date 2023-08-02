@@ -1,4 +1,4 @@
-﻿namespace BookingAPI.Models
+﻿namespace TourBooking.Models
 {
     public class Booking
     {

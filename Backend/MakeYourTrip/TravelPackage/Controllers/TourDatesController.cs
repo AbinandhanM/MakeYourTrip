@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Mvc;
+using TravelPackage.Models;
+using TravelPackage.Interfaces;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using TourPackage.Models;
-using TourPackage.Interfaces;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http;
+using TravelPackage.Exceptions;
+using System;
 
-namespace TourPackage.Controllers
+namespace TravelPackage.Controllers
 {
     [ApiController]
     [Route("api/[controller]/[action]")]

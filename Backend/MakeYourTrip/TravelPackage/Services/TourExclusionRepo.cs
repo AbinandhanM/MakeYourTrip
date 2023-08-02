@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using TourPackage.Models;
-using TourPackage.Models.Context;
-using TourPackage.Interfaces;
-using TourPackage.Exceptions;
+using TravelPackage.Models;
+using TravelPackage.Models.Context;
+using TravelPackage.Interfaces;
+using TravelPackage.Exceptions;
 
 public class TourExclusionRepo : IRepo<TourExclusion, int>
 {

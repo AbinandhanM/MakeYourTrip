@@ -1,4 +1,4 @@
-﻿namespace BookingAPI.Interfaces
+﻿namespace TourBooking.Interfaces
 {
     public interface IRepo<K, T>
     {

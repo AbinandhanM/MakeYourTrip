@@ -1,4 +1,4 @@
-﻿namespace BookingAPI.Models.DTOs
+﻿namespace TourBooking.Models.DTOs
 {
     public class BookingDTO
     {
