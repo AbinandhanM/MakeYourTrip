@@ -8,6 +8,10 @@ using TravelPackage.Exceptions;
 using System;
 using TravelPackage.Models.Context;
 using TourPackage.Models;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using System.Text;
 
 namespace TourPackage
 {
@@ -24,6 +28,53 @@ namespace TourPackage
             builder.Services.AddDbContext<TourContext>(opts =>
             {
                 opts.UseSqlServer(builder.Configuration.GetConnectionString("myConn"));
+            });
+            builder.Services.AddSwaggerGen(c => {
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "Bearer",
+                    BearerFormat = "JWT",
+                    In = ParameterLocation.Header,
+                    Description = "JWT Authorization header using the Bearer scheme."
+                });
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                     {
+                         {
+                            new OpenApiSecurityScheme
+                                {
+                                    Reference = new OpenApiReference
+                                    {
+                                        Type = ReferenceType.SecurityScheme,
+                                        Id = "Bearer"
+                                    }
+                                },
+                            new string[] {}
+                         }
+                 });
+            });
+            builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
+                {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuerSigningKey = true,
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["TokenKey"])),
+                        ValidateIssuer = false,
+                        ValidateAudience = false
+                    };
+                });
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("ReactCors",
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin()
+                               .AllowAnyMethod()
+                               .AllowAnyHeader();
+                    });
             });
 
 
@@ -47,6 +98,9 @@ namespace TourPackage
                 app.UseSwaggerUI();
             }
 
+            app.UseAuthorization();
+            app.UseCors("ReactCors");
+            app.UseAuthentication();
             app.UseAuthorization();
 
 

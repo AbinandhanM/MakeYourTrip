@@ -5,11 +5,14 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using TravelPackage.Exceptions;
 using System;
+using Microsoft.AspNetCore.Cors;
 
 namespace TravelPackage.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors("ReactCors")]
+
     public class ExclusionsController : ControllerBase
     {
         private readonly IRepo<Exclusions, int> _exclusionsRepository;

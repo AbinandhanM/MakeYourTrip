@@ -5,10 +5,13 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using TravelPackage.Exceptions;
 using System;
+using Microsoft.AspNetCore.Cors;
 
 namespace TravelPackage.Controllers
 {
     [Route("api/[controller]")]
+    [EnableCors("ReactCors")]
+
     [ApiController]
     public class TourDetailsController : ControllerBase
     {

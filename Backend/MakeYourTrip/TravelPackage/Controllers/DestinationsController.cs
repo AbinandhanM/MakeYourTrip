@@ -5,11 +5,14 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using TravelPackage.Exceptions;
 using System;
+using Microsoft.AspNetCore.Cors;
 
 namespace TourPackage.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors("ReactCors")]
+
     public class DestinationsController : ControllerBase
     {
         private readonly IRepo<Destination, int> _destinationsRepository;
