@@ -11,7 +11,7 @@ namespace TourPackage.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [EnableCors("ReactCors")]
+    [EnableCors("ReactCORS")]
 
     public class DestinationsController : ControllerBase
     {
