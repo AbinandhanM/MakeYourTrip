@@ -10,7 +10,10 @@ namespace Feedback.Models
 
         [Required]
         [MaxLength(100)]
-        public string TouristName { get; set; }
+        public string TravellerName { get; set; }
+        [Required]
+        [MaxLength(100)]
+        public string TouristSpotName { get; set; }
 
         [Required]
         [MaxLength(100)]

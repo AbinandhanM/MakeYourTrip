@@ -15,7 +15,8 @@ namespace Feedback.Migrations
                 {
                     FeedbackId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    TouristName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    TravellerName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    TouristSpotName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Email = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     FeedbackText = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Rating = table.Column<int>(type: "int", nullable: false),
