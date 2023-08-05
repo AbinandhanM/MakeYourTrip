@@ -12,8 +12,8 @@ using TourBooking.Context;
 namespace TourBooking.Migrations
 {
     [DbContext(typeof(BookingContext))]
-    [Migration("20230801155003_Tourbooking")]
-    partial class Tourbooking
+    [Migration("20230805064743_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,7 +24,7 @@ namespace TourBooking.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("BookingAPI.Models.Booking", b =>
+            modelBuilder.Entity("TourBooking.Models.Booking", b =>
                 {
                     b.Property<int>("BookingId")
                         .ValueGeneratedOnAdd()
@@ -49,7 +49,7 @@ namespace TourBooking.Migrations
                     b.ToTable("Bookings");
                 });
 
-            modelBuilder.Entity("BookingAPI.Models.Passenger", b =>
+            modelBuilder.Entity("TourBooking.Models.Passenger", b =>
                 {
                     b.Property<int>("PassengerId")
                         .ValueGeneratedOnAdd()
@@ -76,9 +76,9 @@ namespace TourBooking.Migrations
                     b.ToTable("Passengers");
                 });
 
-            modelBuilder.Entity("BookingAPI.Models.Passenger", b =>
+            modelBuilder.Entity("TourBooking.Models.Passenger", b =>
                 {
-                    b.HasOne("BookingAPI.Models.Booking", "Booking")
+                    b.HasOne("TourBooking.Models.Booking", "Booking")
                         .WithMany("Passengers")
                         .HasForeignKey("BookingId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -87,7 +87,7 @@ namespace TourBooking.Migrations
                     b.Navigation("Booking");
                 });
 
-            modelBuilder.Entity("BookingAPI.Models.Booking", b =>
+            modelBuilder.Entity("TourBooking.Models.Booking", b =>
                 {
                     b.Navigation("Passengers");
                 });
