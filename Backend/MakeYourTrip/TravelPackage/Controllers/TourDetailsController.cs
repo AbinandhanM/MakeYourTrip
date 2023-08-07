@@ -113,5 +113,29 @@ namespace TravelPackage.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, "Error while deleting tour details.");
             }
         }
+
+
+        [HttpPut("Update_BookingCount")]
+        //[Authorize(Roles = "Admin")]
+        [ProducesResponseType(typeof(ActionResult<BookingCountUpdateDTO>), StatusCodes.Status202Accepted)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<BookingCountUpdateDTO>> UpdateUserStatus(BookingCountUpdateDTO bookingCount)
+        {
+            try
+            {
+                var result = await _tourDetailsRepository.ChangeBookingStatus(bookingCount);
+                   if (result != null)
+                {
+                    return Ok(result);
+                }
+                return NotFound();
+            }
+          
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
     }
 }

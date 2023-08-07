@@ -69,4 +69,9 @@ public class TourExclusionRepo : IRepo<TourExclusion, int>
         await _context.SaveChangesAsync();
         return tourExclusion;
     }
+
+    public Task<BookingCountUpdateDTO?> ChangeBookingStatus(BookingCountUpdateDTO bookingCountUpdate)
+    {
+        throw new NotImplementedException();
+    }
 }

@@ -8,7 +8,7 @@ using TravelPackage.Models.Context;
 
 namespace TravelPackage.Models
 {
-    public class TourDatesRepo : IRepo<TourDate,int>
+    public class TourDatesRepo : IRepo<TourDate, int>
     {
         private readonly TourContext _context;
 
@@ -83,6 +83,11 @@ namespace TravelPackage.Models
                 return tourDate;
             }
             return null;
+        }
+
+        public Task<BookingCountUpdateDTO?> ChangeBookingStatus(BookingCountUpdateDTO bookingCountUpdate)
+        {
+            throw new NotImplementedException();
         }
     }
 }

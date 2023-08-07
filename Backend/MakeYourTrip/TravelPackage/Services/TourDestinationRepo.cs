@@ -6,7 +6,7 @@ using TravelPackage.Models.Context;
 using TravelPackage.Interfaces;
 using TravelPackage.Exceptions;
 
-public class TourDestinationRepo :IRepo<TourDestination,int>
+public class TourDestinationRepo : IRepo<TourDestination, int>
 {
     private readonly TourContext _context;
 
@@ -91,5 +91,10 @@ public class TourDestinationRepo :IRepo<TourDestination,int>
         _context.TourDestinations.Remove(tourDestination);
         _context.SaveChanges();
         return tourDestination;
+    }
+
+    public Task<BookingCountUpdateDTO?> ChangeBookingStatus(BookingCountUpdateDTO bookingCountUpdate)
+    {
+        throw new NotImplementedException();
     }
 }

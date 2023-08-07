@@ -9,7 +9,7 @@ using TravelPackage.Models;
 
 namespace TravelPackage.Models
 {
-    public class InclusionsRepo : IRepo<Inclusions,int>
+    public class InclusionsRepo : IRepo<Inclusions, int>
     {
         private readonly TourContext _context;
 
@@ -105,6 +105,11 @@ namespace TravelPackage.Models
                
                 throw new DatabaseEmptyException("Database is empty");
             }
+        }
+
+        public Task<BookingCountUpdateDTO?> ChangeBookingStatus(BookingCountUpdateDTO bookingCountUpdate)
+        {
+            throw new NotImplementedException();
         }
     }
 
