@@ -46,7 +46,7 @@ public class TourDestinationRepo :IRepo<TourDestination,int>
     {
         if (_context.Exclusions != null)
         {
-            return await _context.TourDestinations.ToListAsync();
+            return await _context.TourDestinations.Include(t=>t.Destination).ToListAsync();
         }
         else
         {

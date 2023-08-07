@@ -22,7 +22,7 @@ namespace TourPackage.Models
             if (_context.TourDetails != null)
             {
 
-                var tourdetails= await _context.TourDetails.Include(u=>u.TourInclusion).Include(s=>s.TourExclusion).Include(t=>t.TourDate).ToListAsync();
+                var tourdetails= await _context.TourDetails.Include(u=>u.TourInclusion).Include(s=>s.TourExclusion).Include(t=>t.TourDate).Include(t => t.TourDestination).ToListAsync();
                 return tourdetails;
                 
             }
@@ -36,9 +36,14 @@ namespace TourPackage.Models
 
         public async Task<TourDetails?> Get(int id)
         {
-            return await _context.TourDetails.FirstOrDefaultAsync(s=>s.TourId==id);
+            return await _context.TourDetails
+                .Include(u => u.TourInclusion)    
+                .Include(s => s.TourExclusion)   
+                .Include(t => t.TourDate)         
+                .Include(t => t.TourDestination)  
+                .FirstOrDefaultAsync(s => s.TourId == id);
         }
-      
+
         public async Task<TourDetails> Add(TourDetails tourDetails)
         {
             _context.TourDetails.Add(tourDetails);
