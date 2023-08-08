@@ -67,3 +67,4 @@ F:\Assessment\Big Bang Assessment 3\Backend\MakeYourTrip\Image\obj\Debug\net6.0\
 F:\Assessment\Big Bang Assessment 3\Backend\MakeYourTrip\Image\obj\Debug\net6.0\Image.pdb
 F:\Assessment\Big Bang Assessment 3\Backend\MakeYourTrip\Image\obj\Debug\net6.0\Image.genruntimeconfig.cache
 F:\Assessment\Big Bang Assessment 3\Backend\MakeYourTrip\Image\obj\Debug\net6.0\ref\Image.dll
+F:\Assessment\Big Bang Assessment 3\Backend\MakeYourTrip\Image\bin\Debug\net6.0\Serilog.dll

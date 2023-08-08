@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "SyNusQ7y3BUfDbPjs38sORO77sKcnjgdwb+vAWTD05AUispZ4HyasXH8JPVeYo/VgOcbwM9Bexe2G/ME1PBDtQ==",
+  "dgSpecHash": "QR0wBTzdwDAy2Ojf4qAiRPDotHxnsG098DkcjKmqqHHXBcfhvACGTrskoeO0vDA1iaO+qLjsijzTRkO0AbC4/A==",
   "success": true,
   "projectFilePath": "F:\\Assessment\\Big Bang Assessment 3\\Backend\\MakeYourTrip\\Feedback\\Feedback.csproj",
   "expectedPackageFiles": [
@@ -36,6 +36,7 @@
     "C:\\Users\\Abinandhan\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\Abinandhan\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Abinandhan\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\Abinandhan\\.nuget\\packages\\serilog\\3.0.1\\serilog.3.0.1.nupkg.sha512",
     "C:\\Users\\Abinandhan\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "C:\\Users\\Abinandhan\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "C:\\Users\\Abinandhan\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",

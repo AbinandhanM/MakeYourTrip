@@ -67,3 +67,4 @@ F:\Assessment\Big Bang Assessment 3\Backend\MakeYourTrip\TravelPackage\obj\Debug
 F:\Assessment\Big Bang Assessment 3\Backend\MakeYourTrip\TravelPackage\obj\Debug\net6.0\TravelPackage.pdb
 F:\Assessment\Big Bang Assessment 3\Backend\MakeYourTrip\TravelPackage\obj\Debug\net6.0\TravelPackage.genruntimeconfig.cache
 F:\Assessment\Big Bang Assessment 3\Backend\MakeYourTrip\TravelPackage\obj\Debug\net6.0\ref\TravelPackage.dll
+F:\Assessment\Big Bang Assessment 3\Backend\MakeYourTrip\TravelPackage\bin\Debug\net6.0\Serilog.dll
